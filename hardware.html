@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hardware i586 - Especificações</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-full">
+<header class="site-header">
+<div>
+<h1>SPECTRA - RÁDIO TELESCÓPIO i586</h1>
+<p class="sub">Infraestrutura computacional e nós do cluster</p>
+</div>
+<div class="header-actions"><div class="header-version"><span>S.P.E.C.T.R.A</span><strong>6.0.0</strong></div><a class="account-link" data-account-link href="conta.html">Entrar / Criar conta</a></div>
+</header>
+<div class="main-layout">
+<nav aria-label="Navegação principal" class="sidebar"><div class="sidebar-title">ÍNDICE</div><ul><li><a class="nav-link" href="index.html">Portal Entrada</a></li><li><a class="nav-link" href="sobre.html">Sobre o Projeto</a></li><li><a class="nav-link active" href="hardware.html">Hardware i586</a></li><li><a class="nav-link" href="telemetria.html">Telemetria</a></li><li><a class="nav-link" href="logs.html">Logs de Campo</a></li><li><a class="nav-link" href="versoes.html">Histórico de Versões</a></li><li><a class="nav-link" href="espectros.html">Espectros</a></li><li><a class="nav-link" href="software.html">Software &amp; DSP</a></li><li><a class="nav-link" href="links.html">Links SETI/NASA</a></li><li><a class="nav-link" href="contato.html">Contato</a></li></ul><div class="sidebar-version"><span>SOFTWARE</span><strong>S.P.E.C.T.R.A 23.0.1</strong><small>Versão mais recente organizada</small></div></nav>
+<main class="content">
+<span class="kicker">INFRAESTRUTURA COMPUTACIONAL</span>
+<h2>Arquitetura e Hardware</h2>
+<p class="lead">A estação reúne computadores de diferentes gerações x86. A sequência organizada até 23.0.1 preserva o foco em Win32 e em máquinas antigas, enquanto as versões posteriores acrescentam módulos científicos e interfaces que podem exigir perfis de uso adequados ao hardware.</p>
+<div class="spec-grid">
+<div class="spec-card"><strong>x86</strong><span>arquitetura de referência</span></div>
+<div class="spec-card"><strong>i386 / i486 / i586</strong><span>famílias antigas consideradas</span></div>
+<div class="spec-card"><strong>640 × 480</strong><span>resolução de referência para telas antigas</span></div>
+</div>
+<h3>Computador central</h3>
+<table class="retro-table">
+<tr><th>Componente</th><th>Descrição técnica</th></tr>
+<tr><td>Processador</td><td>AMD K6-2 500 MHz (Socket 7)</td></tr>
+<tr><td>Placa-mãe</td><td>PCChips M571 (Chipset SiS 5598)</td></tr>
+<tr><td>Memória</td><td>256 MB DIMM</td></tr>
+<tr><td>Placa de captura</td><td>Em construção</td></tr>
+<tr><td>Armazenamento</td><td>HD IDE de 40 GB (com previsão de Compact Flash) + HD IDE de 80 GB</td></tr>
+<tr><td>Rede</td><td>Realtek RTL8139D - PCI</td></tr>
+</table>
+<div class="image-frame"><img alt="Computador central com AMD K6-2" class="machine-photo" src="IMG/K6-2.webp"/></div>
+<h3>Nó Escravo “João Paulo II”</h3>
+<table class="retro-table">
+<tr><th>Componente</th><th>Descrição técnica</th></tr>
+<tr><td>Processador</td><td>Intel Pentium 100 MHz (Socket 7)</td></tr>
+<tr><td>Placa-mãe</td><td>PCChips M537 (Chipset VIA Apollo VP1)</td></tr>
+<tr><td>Memória</td><td>64 MB EDO SIMM - 72 pinos</td></tr>
+<tr><td>Placa de captura</td><td>Em construção</td></tr>
+<tr><td>Armazenamento</td><td>HD IDE de 40 GB (com previsão de Compact Flash)</td></tr>
+<tr><td>Rede</td><td>Realtek RTL8139D - PCI</td></tr>
+</table>
+<div class="image-frame"><img alt="Nó João Paulo II com Pentium 100 MHz" class="machine-photo" src="IMG/Pentium.JPG"/></div>
+<h3>Nó Escravo “Pio XII”</h3>
+<table class="retro-table">
+<tr><th>Componente</th><th>Descrição técnica</th></tr>
+<tr><td>Processador</td><td>Intel Pentium 133 MHz (Socket 7)</td></tr>
+<tr><td>Placa-mãe</td><td>PCChips M520 (Chipset Intel 430VX)</td></tr>
+<tr><td>Memória</td><td>64 MB EDO SIMM - 72 pinos</td></tr>
+<tr><td>Placa de captura</td><td>Em construção</td></tr>
+<tr><td>Armazenamento</td><td>HD IDE de 40 GB (com previsão de Compact Flash)</td></tr>
+<tr><td>Rede</td><td>Realtek RTL8139D - PCI</td></tr>
+</table>
+<div class="image-frame"><img alt="Nó Pio XII com Pentium 133 MHz" class="machine-photo" src="IMG/pentiumII.jpe"/></div>
+<h3>Nó Escravo “Leão XIII”</h3>
+<table class="retro-table">
+<tr><th>Componente</th><th>Descrição técnica</th></tr>
+<tr><td>Processador</td><td>Pentium MMX 166 MHz (Socket 7), com previsão de Pentium MMX 233 MHz</td></tr>
+<tr><td>Placa-mãe</td><td>PCChips M572 (Chipset Intel 430TX)</td></tr>
+<tr><td>Memória</td><td>64 MB EDO SIMM - 72 pinos</td></tr>
+<tr><td>Placa de captura</td><td>Em construção</td></tr>
+<tr><td>Armazenamento</td><td>HD IDE de 40 GB (com previsão de Compact Flash)</td></tr>
+<tr><td>Rede</td><td>Realtek RTL8139D - PCI</td></tr>
+</table>
+<div class="image-row">
+<div class="image-frame"><img alt="Pentium MMX 166 MHz" class="machine-photo" src="IMG/MMX166.jpeg"/></div>
+<div class="image-frame"><img alt="Pentium MMX 233 MHz" class="machine-photo" src="IMG/MMX233.jpe"/></div>
+</div>
+<h3>Nó Escravo “Paulo”</h3>
+<table class="retro-table">
+<tr><th>Componente</th><th>Descrição técnica</th></tr>
+<tr><td>Processador</td><td>Intel i486 DX2 66 MHz (Socket 3)</td></tr>
+<tr><td>Placa-mãe</td><td>PCChips M912 (Chipset UMC - UM8498F)</td></tr>
+<tr><td>Memória</td><td>16 MB EDO SIMM - 72 pinos</td></tr>
+<tr><td>Placa de captura</td><td>Em construção</td></tr>
+<tr><td>Armazenamento</td><td>HD IDE de 3 GB (com previsão de Compact Flash)</td></tr>
+<tr><td>Rede</td><td>UMC UM9008F - ISA</td></tr>
+</table>
+<div class="image-frame"><img alt="Nó Paulo com Intel i486 DX2" class="machine-photo" src="IMG/DX2.jpg"/></div>
+<h3>Nó Escravo “Petros”</h3>
+<table class="retro-table">
+<tr><th>Componente</th><th>Descrição técnica</th></tr>
+<tr><td>Processador</td><td>AMD Am386 DX-40 MHz (PGA132)</td></tr>
+<tr><td>Placa-mãe</td><td>TK-82C491 (UMC - UM82C491F)</td></tr>
+<tr><td>Memória</td><td>8 MB EDO SIMM - 30 pinos</td></tr>
+<tr><td>Placa de captura</td><td>Em construção</td></tr>
+<tr><td>Armazenamento</td><td>Em construção</td></tr>
+<tr><td>Rede</td><td>UMC UM9008F - ISA</td></tr>
+</table>
+<div class="image-frame"><img alt="Nó Petros com AMD Am386 DX-40" class="machine-photo" src="IMG/AMD386.jpg"/></div>
+<h3>Compatibilidade e alvo de compilação nas fontes organizadas</h3>
+<table class="tech-table">
+<tr><th>Aspecto</th><th>O que as fontes recentes demonstram</th></tr>
+<tr><td>Alvo Win32</td><td>O fonte define <code>WINVER</code> e <code>_WIN32_WINNT</code> como <code>0x0500</code>, correspondente ao alvo de API do Windows 2000.</td></tr>
+<tr><td>Sistemas antigos</td><td>O código ainda contém identificação de Windows 95/98/ME e NT 4.0, além de lógica de interface para telas pequenas, mas o fonte isolado não comprova execução estável em cada um desses sistemas.</td></tr>
+<tr><td>Telas legadas</td><td>O layout considera desde 640 × 480 e adiciona barras de rolagem quando a área disponível é menor que o tamanho de referência da janela.</td></tr>
+<tr><td>Compilador legado</td><td>O próprio fonte declara compatibilidade de código com Dev-C++ 4.9.9.2 / MinGW 3.4.2 e Windows 2000.</td></tr>
+<tr><td>Robustez 3.5.4</td><td>A 3.5.4 adiciona wrappers limitados para strings/formatação e evita algumas dependências frágeis do CRT antigo, sem abandonar o alvo legado.</td></tr>
+</table>
+<div class="note"><strong>Perfis introduzidos em 4.1.1:</strong> a camada científica oferece perfis 386/486, Pentium, K6 e Fast para ajustar recursos como PFB, MFS, w-stacking, iterações de CLEAN e tamanho do cubo às limitações da máquina. As versões posteriores reorganizam módulos e interfaces sem apagar essa evolução.</div></main>
+</div>
+<footer><p>Hardware mantido e operado via terminal local e remoto</p></footer>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>

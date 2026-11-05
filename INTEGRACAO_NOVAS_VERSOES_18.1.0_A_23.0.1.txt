@@ -1,0 +1,82 @@
+INTEGRAÇÃO DAS NOVAS VERSÕES AO SITE S.P.E.C.T.R.A
+==============================================================
+
+Base do site preservada: radiotelescopio_spectra_6.0.0.
+Nenhum arquivo existente foi removido. O banco SQLite existente foi mantido sem alterações.
+Foram adicionadas 10 versões recebidas separadamente: 18.1.0, 18.1.1, 18.2.0, 18.3.0, 19.0.0, 20.0.0, 21.0.0, 22.0.0, 23.0.0, 23.0.1.
+Cada versão foi copiada integralmente para CODES/<versão>/, recebeu um arquivo de fontes consolidados, um relatório de inventário SHA-256 e um ZIP para download.
+A página versoes.html recebeu uma seção separada, mantendo o catálogo histórico 1.0.0–6.0.0 intacto. index.html foi atualizado para anunciar a série adicional.
+
+COMPARAÇÃO ESTÁTICA ENTRE VERSÕES CONSECUTIVAS
+
+18.1.0: Primeira versão desta série de pacotes enviada para inclusão. Não foi presumida equivalência de linhagem com a série histórica 1.0.0–6.0.0.
+  - 133 arquivos no pacote recebido.
+  - 2,779,075 bytes de conteúdo original.
+  - O pacote completo preserva os diretórios originais GATEWAY_SPECTRA_18 e PARA_C_RADIO_TCC.
+
+18.1.1: Comparada estaticamente com 18.1.0: 0 arquivo(s) adicionado(s), 0 removido(s) e 2 alterado(s).
+  - Base de comparação: 18.1.0.
+  - Arquivos adicionados: 0; removidos: 0; modificados: 2.
+  - A comparação considera caminhos e hashes dos arquivos; não afirma compilação ou validação em hardware.
+  - Modificados: PARA_C_RADIO_TCC/aurelius.c, PARA_C_RADIO_TCC/aurelius_bh_core.h
+
+18.2.0: Comparada estaticamente com 18.1.1: 0 arquivo(s) adicionado(s), 0 removido(s) e 2 alterado(s).
+  - Base de comparação: 18.1.1.
+  - Arquivos adicionados: 0; removidos: 0; modificados: 2.
+  - A comparação considera caminhos e hashes dos arquivos; não afirma compilação ou validação em hardware.
+  - Modificados: PARA_C_RADIO_TCC/aurelius_bh_core.h, PARA_C_RADIO_TCC/aurelius_galaxy_core.h
+
+18.3.0: Comparada estaticamente com 18.2.0: 1 arquivo(s) adicionado(s), 0 removido(s) e 3 alterado(s).
+  - Base de comparação: 18.2.0.
+  - Arquivos adicionados: 1; removidos: 0; modificados: 3.
+  - A comparação considera caminhos e hashes dos arquivos; não afirma compilação ou validação em hardware.
+  - Adicionados: PARA_C_RADIO_TCC/spectra_sprite_scaler.h
+  - Modificados: PARA_C_RADIO_TCC/aurelius.c, PARA_C_RADIO_TCC/aurelius_bh_core.h, PARA_C_RADIO_TCC/aurelius_galaxy_core.h
+
+19.0.0: Comparada estaticamente com 18.3.0: 2 arquivo(s) adicionado(s), 0 removido(s) e 4 alterado(s).
+  - Base de comparação: 18.3.0.
+  - Arquivos adicionados: 2; removidos: 0; modificados: 4.
+  - A comparação considera caminhos e hashes dos arquivos; não afirma compilação ou validação em hardware.
+  - Adicionados: PARA_C_RADIO_TCC/spectra_ai_validation.h, PARA_C_RADIO_TCC/spectra_sprite_memory.h
+  - Modificados: PARA_C_RADIO_TCC/aurelius.c, PARA_C_RADIO_TCC/aurelius162_deepai.h, PARA_C_RADIO_TCC/aurelius_bh_core.h, PARA_C_RADIO_TCC/aurelius_galaxy_core.h
+
+20.0.0: Comparada estaticamente com 19.0.0: 1 arquivo(s) adicionado(s), 0 removido(s) e 1 alterado(s).
+  - Base de comparação: 19.0.0.
+  - Arquivos adicionados: 1; removidos: 0; modificados: 1.
+  - A comparação considera caminhos e hashes dos arquivos; não afirma compilação ou validação em hardware.
+  - Adicionados: PARA_C_RADIO_TCC/spectra_lp_5min.h
+  - Modificados: PARA_C_RADIO_TCC/spectra.c
+
+21.0.0: Comparada estaticamente com 20.0.0: 37 arquivo(s) adicionado(s), 0 removido(s) e 5 alterado(s).
+  - Base de comparação: 20.0.0.
+  - Arquivos adicionados: 37; removidos: 0; modificados: 5.
+  - A comparação considera caminhos e hashes dos arquivos; não afirma compilação ou validação em hardware.
+  - Adicionados: PARA_C_RADIO_TCC/C/aurelius.c, PARA_C_RADIO_TCC/C/aurelius14_solar_core.h, PARA_C_RADIO_TCC/C/aurelius15_enhance.h, PARA_C_RADIO_TCC/C/aurelius162_deepai.h, PARA_C_RADIO_TCC/C/aurelius16_tinyai.h, PARA_C_RADIO_TCC/C/aurelius_bh_core.h, PARA_C_RADIO_TCC/C/aurelius_galaxy_core.h, PARA_C_RADIO_TCC/C/spectra.c, PARA_C_RADIO_TCC/C/spectra12_core.h, PARA_C_RADIO_TCC/C/spectra13_fits.h, PARA_C_RADIO_TCC/C/spectra13_resume.h, PARA_C_RADIO_TCC/C/spectra17_progress.h…
+  - Modificados: PARA_C_RADIO_TCC/aurelius.c, PARA_C_RADIO_TCC/spectra.c, PARA_C_RADIO_TCC/spectra12_win32.inc, PARA_C_RADIO_TCC/spectra17_progress.h, PARA_C_RADIO_TCC/spectra7_lab_win32.inc
+
+22.0.0: Comparada estaticamente com 21.0.0: 0 arquivo(s) adicionado(s), 36 removido(s) e 5 alterado(s).
+  - Base de comparação: 21.0.0.
+  - Arquivos adicionados: 0; removidos: 36; modificados: 5.
+  - A comparação considera caminhos e hashes dos arquivos; não afirma compilação ou validação em hardware.
+  - Removidos: PARA_C_RADIO_TCC/C/aurelius.c, PARA_C_RADIO_TCC/C/aurelius14_solar_core.h, PARA_C_RADIO_TCC/C/aurelius15_enhance.h, PARA_C_RADIO_TCC/C/aurelius162_deepai.h, PARA_C_RADIO_TCC/C/aurelius16_tinyai.h, PARA_C_RADIO_TCC/C/aurelius_bh_core.h, PARA_C_RADIO_TCC/C/aurelius_galaxy_core.h, PARA_C_RADIO_TCC/C/spectra.c, PARA_C_RADIO_TCC/C/spectra12_core.h, PARA_C_RADIO_TCC/C/spectra13_fits.h, PARA_C_RADIO_TCC/C/spectra13_resume.h, PARA_C_RADIO_TCC/C/spectra17_progress.h…
+  - Modificados: PARA_C_RADIO_TCC/aurelius.c, PARA_C_RADIO_TCC/aurelius_bh_core.h, PARA_C_RADIO_TCC/aurelius_galaxy_core.h, PARA_C_RADIO_TCC/spectra.c, PARA_C_RADIO_TCC/spectra_lp_5min.h
+
+23.0.0: Comparada estaticamente com 22.0.0: 1 arquivo(s) adicionado(s), 0 removido(s) e 2 alterado(s).
+  - Base de comparação: 22.0.0.
+  - Arquivos adicionados: 1; removidos: 0; modificados: 2.
+  - A comparação considera caminhos e hashes dos arquivos; não afirma compilação ou validação em hardware.
+  - Adicionados: PARA_C_RADIO_TCC/spectra23_export.h
+  - Modificados: PARA_C_RADIO_TCC/spectra.c, PARA_C_RADIO_TCC/spectra17_progress.h
+
+23.0.1: Comparada estaticamente com 23.0.0: 1 arquivo(s) adicionado(s), 0 removido(s) e 1 alterado(s).
+  - Base de comparação: 23.0.0.
+  - Arquivos adicionados: 1; removidos: 0; modificados: 1.
+  - A comparação considera caminhos e hashes dos arquivos; não afirma compilação ou validação em hardware.
+  - Adicionados: PARA_C_RADIO_TCC/spectra23_screensaver.h
+  - Modificados: PARA_C_RADIO_TCC/spectra17_progress.h
+
+LIMITES
+- As análises comparam presença, caminho e hash de arquivos; não são testes funcionais.
+- Não foi afirmado que o código compila ou executa em hardware real.
+- A série 18.1.0–23.0.1 foi mantida separada porque não há evidência no pacote de que deva substituir ou continuar cronologicamente a série 1.0.0–6.0.0.
+- Os ZIPs de download contêm os arquivos originais daquela versão, sem arquivos de análise adicionados ao pacote original.

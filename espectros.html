@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galeria de Espectros - Rádio Telescópio i586</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-full">
+<header class="site-header">
+<div>
+<h1>SPECTRA - RÁDIO TELESCÓPIO i586</h1>
+<p class="sub">Sinais, mapas e processamento espectral</p>
+</div>
+<div class="header-actions"><div class="header-version"><span>S.P.E.C.T.R.A</span><strong>23.0.1</strong></div><a class="account-link" data-account-link href="conta.html">Entrar / Criar conta</a></div>
+</header>
+<div class="main-layout">
+<nav aria-label="Navegação principal" class="sidebar"><div class="sidebar-title">ÍNDICE</div><ul><li><a class="nav-link" href="index.html">Portal Entrada</a></li><li><a class="nav-link" href="sobre.html">Sobre o Projeto</a></li><li><a class="nav-link" href="hardware.html">Hardware i586</a></li><li><a class="nav-link" href="telemetria.html">Telemetria</a></li><li><a class="nav-link" href="logs.html">Logs de Campo</a></li><li><a class="nav-link" href="versoes.html">Histórico de Versões</a></li><li><a class="nav-link active" href="espectros.html">Espectros</a></li><li><a class="nav-link" href="software.html">Software &amp; DSP</a></li><li><a class="nav-link" href="links.html">Links SETI/NASA</a></li><li><a class="nav-link" href="contato.html">Contato</a></li></ul><div class="sidebar-version"><span>SOFTWARE</span><strong>S.P.E.C.T.R.A 23.0.1</strong><small>Versão mais recente organizada</small></div></nav>
+<main class="content">
+<span class="kicker">SINAIS / ESPECTROS / IMAGING</span>
+<h2>Espectros e Produtos Científicos</h2>
+<section class="live-section" aria-labelledby="live-spectrum-title">
+<h3 id="live-spectrum-title">Espectros publicados</h3>
+<p>A média e o histórico são calculados pela máquina intermediária. A consulta ao servidor ocorre a cada 60 segundos.</p>
+<div class="telemetry-toolbar"><span id="spectrum-state" class="badge warn">Aguardando dados</span><span id="spectrum-updated" class="muted"></span></div><section class="live-panel"><h3>Mapa colorido da média geral dos espectros</h3><canvas id="spectrum-map" class="telemetry-canvas" width="900" height="360"></canvas><p class="muted">Cada linha representa uma atualização da média acumulada. A agregação é feita pela máquina intermediária; o navegador apenas desenha o mapa.</p></section><section class="live-panel"><h3>Média geral atual</h3><canvas id="spectrum-line" class="telemetry-canvas" width="900" height="280"></canvas></section><div class="note">A FFT continua sendo calculada pelo próprio S.P.E.C.T.R.A como parte do funcionamento científico existente. A telemetria somente exporta os valores já disponíveis, sem executar processamento adicional de imagem.</div></section>
+
+<p class="lead">A evolução documentada parte da FFT e do heatmap das primeiras versões e chega às camadas de calibração, interferometria, deconvolução, síntese multifrequência, Observatório, instrumentação e arquitetura FX.</p>
+<div class="info-grid">
+<div class="info-card"><strong>FFT / PFB</strong><span>processamento espectral legado e canalização avançada</span></div>
+<div class="info-card"><strong>CLEAN</strong><span>Högbom e Multi-Scale nas camadas científicas</span></div>
+<div class="info-card"><strong>MFS / w-stacking</strong><span>imaging de banda e cubo espectral</span></div>
+<div class="info-card"><strong>FX</strong><span>canalização e produtos complexos nas versões 4.6.x</span></div>
+</div>
+<h3>Evolução dos produtos</h3>
+<div class="version-timeline">
+<div class="version-item"><strong>1.0.0–1.4.6</strong> — FFT local, gráfico espectral, heatmap e captura contínua.</div>
+<div class="version-item"><strong>1.5.6–3.5.4</strong> — Drift-Scan, correlação, síntese de abertura, mapas 2D/3D e mosaicos de larga escala.</div>
+<div class="version-item"><strong>3.6.4–3.6.13</strong> — astrometria, centro de fase e projeção UVW dependente do tempo.</div>
+<div class="version-item"><strong>3.7.13</strong> — calibração, RFI, Dirty Image/Beam, Högbom CLEAN e visibilidades espectrais.</div>
+<div class="version-item"><strong>3.8.13–3.9.13</strong> — Observatório, FITS, replay, closure, fringe fit, self-cal, planejamento e integridade.</div>
+<div class="version-item"><strong>4.0.0–4.1.1</strong> — MFS, Multi-Scale CLEAN, w-stacking, cubo/índice espectral, PFB, weighting, feixe primário e mapas de qualidade.</div>
+<div class="version-item"><strong>4.2.1–4.6.11</strong> — integração Aurelius, telemetria, evolução de interfaces e arquitetura FX.</div><div class="version-item"><strong>5.0.0–5.1.2</strong> — memória monitorada e exportação BMP por blocos.</div><div class="version-item"><strong>5.2.1–5.3.1</strong> — modos galácticos artístico e científico com distância recebida por CSV.</div><div class="version-item"><strong>6.0.0</strong> — potência de áudio em FS², RMS/pico em dBFS e espectro unilateral opcional.</div>
+</div>
+<h3>Produtos citados no conjunto</h3>
+<ul class="feature-list">
+<li>Visibilidades e produtos exportáveis para análise.</li>
+<li>Dirty image, synthesized beam/PSF e imagem CLEAN.</li>
+<li>Cubo espectral e mapa de índice espectral.</li>
+<li>Waterfall e séries para transientes/dedispersão.</li>
+<li>Mapas de ruído, SNR e peso nas camadas científicas avançadas.</li>
+<li>Metadados de sessão e pipeline para reprocessamento/replay.</li>
+</ul>
+<div class="note"><strong>Sobre o 3D:</strong> as versões 3.1.0–3.4.3 distinguem representação visual inferida de distância física; a reconstrução evolui até ser derivada diretamente do heatmap, sem transformar intensidade em uma medida direta de distância.</div>
+
+<div class="note"><strong>Áudio na 6.0.0:</strong> os produtos de CIENCIA_AUDIO possuem frequência de áudio e potência PCM normalizada. Não são uma medição calibrada de RF. A área ao vivo acima continua mostrando o esquema de telemetria já existente; anexar uma versão ao histórico não converte automaticamente seus novos CSVs em gráficos dessa área.</div>
+</main>
+</div>
+<footer><p>Espectros publicados • pipeline documentado no S.P.E.C.T.R.A</p></footer>
+</div>
+<script src="app.js" defer></script><script src="espectros.js" defer></script>
+</body>
+</html>

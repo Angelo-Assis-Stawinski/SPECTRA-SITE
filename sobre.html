@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sobre o Projeto - Rádio Telescópio i586</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-full">
+<header class="site-header">
+<div>
+<h1>SPECTRA - RÁDIO TELESCÓPIO i586</h1>
+<p class="sub">Sistema de captura, processamento e interferometria</p>
+</div>
+<div class="header-actions"><div class="header-version"><span>S.P.E.C.T.R.A</span><strong>23.0.1</strong></div><a class="account-link" data-account-link href="conta.html">Entrar / Criar conta</a></div>
+</header>
+<div class="main-layout">
+<nav aria-label="Navegação principal" class="sidebar"><div class="sidebar-title">ÍNDICE</div><ul><li><a class="nav-link" href="index.html">Portal Entrada</a></li><li><a class="nav-link active" href="sobre.html">Sobre o Projeto</a></li><li><a class="nav-link" href="hardware.html">Hardware i586</a></li><li><a class="nav-link" href="telemetria.html">Telemetria</a></li><li><a class="nav-link" href="logs.html">Logs de Campo</a></li><li><a class="nav-link" href="versoes.html">Histórico de Versões</a></li><li><a class="nav-link" href="espectros.html">Espectros</a></li><li><a class="nav-link" href="software.html">Software &amp; DSP</a></li><li><a class="nav-link" href="links.html">Links SETI/NASA</a></li><li><a class="nav-link" href="contato.html">Contato</a></li></ul><div class="sidebar-version"><span>SOFTWARE</span><strong>S.P.E.C.T.R.A 23.0.1</strong><small>Versão mais recente organizada</small></div></nav>
+<main class="content">
+<span class="kicker">VISÃO GERAL</span>
+<h2>Sobre o Projeto</h2>
+<p class="lead">O Projeto Rádio Telescópio i586 reúne radioastronomia, processamento de sinais e computação clássica x86. O conjunto organizado permite acompanhar a evolução do software em 105 versões, da 1.0.0 à 23.0.1.</p>
+<div class="note"><strong>Numeração atual:</strong> o portal utiliza somente a nomenclatura organizada definida no relatório técnico. Os arquivos da pasta <code>CODES</code> seguem essa mesma estrutura por versão.</div>
+<h3>Missão principal</h3>
+<p>Capturar, filtrar e catalogar emissões eletromagnéticas do plano galáctico, com foco na linha de 21 cm do hidrogênio neutro, e explorar interferometria, síntese de abertura, visualização e processamento científico mantendo compatibilidade com a plataforma Win32 legada.</p>
+<div class="info-grid">
+<div class="info-card"><strong>1420.405 MHz</strong><span>frequência RF padrão</span></div>
+<div class="info-card"><strong>44.100 Hz</strong><span>amostragem de áudio/sinal</span></div>
+<div class="info-card"><strong>TCP 6789 / UDP 6790</strong><span>dados do cluster / sincronismo</span></div>
+<div class="info-card"><strong>até 10 nós</strong><span>instâncias Escravas por Mestre</span></div>
+</div>
+<h3>Da 1.0.0 à 6.0.0</h3>
+<div class="card-grid">
+<div class="card"><h3>1.0.0–1.4.6</h3><p>FFT, captura WinMM, persistência, heatmap, tempo real, suavização, exportação visual e correções de aquisição.</p></div>
+<div class="card"><h3>1.5.6–2.5.5</h3><p>Drift-Scan, cluster Mestre/Escravo, GPS 1PPS, sincronismo, geometria, síntese de abertura, persistência e recuperação automática.</p></div>
+<div class="card"><h3>2.6.6–3.6.13</h3><p>SANDBOX tridimensional, mapas e mosaicos de larga escala, reconstruções visuais e astrometria/UVW dependente do tempo.</p></div>
+<div class="card"><h3>3.7.13–4.6.11</h3><p>Pipeline científico, Observatório, FITS/replay/calibração, ferramentas avançadas, Aurelius, arquitetura FX e sucessivas correções de interface.</p></div>
+<div class="card"><h3>5.0.0–6.0.0</h3><p>Gestão de memória, exportação em blocos, visualização galáctica artística, geometria científica com distâncias de CSV e métricas de áudio demodulado.</p></div>
+</div>
+<p><a class="button-link" href="versoes.html">Abrir histórico completo das versões</a></p>
+<h3>Resumo da estação</h3>
+<table class="tech-table"><tr><th>Item</th><th>Descrição</th></tr>
+<tr><td>Localização</td><td>Lat. -25.4° S / Long. -49.2° W</td></tr>
+<tr><td>Antena</td><td>Parabólica + “Cantena”</td></tr>
+<tr><td>Backend</td><td>Placa PCI de som recebendo sinais das antenas, servidor i586 e software personalizado.</td></tr>
+<tr><td>Plataforma</td><td>Microsoft Windows / API Win32, com foco documental em hardware e toolchains antigos.</td></tr></table>
+</main>
+</div>
+<footer><p>Projeto Rádio Telescópio i586 • documentação integrada ao S.P.E.C.T.R.A</p></footer>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>

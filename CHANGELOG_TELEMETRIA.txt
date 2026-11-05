@@ -1,0 +1,21 @@
+S.P.E.C.T.R.A v53 — integração Web/Telemetria
+
+SITE
+- Telemetria dinâmica: heatmap atual, mapa de larga escala, parâmetros e arquivos publicados.
+- Espectros: mapa colorido da média histórica e curva média atual.
+- Logs de Campo: feed automático/editável em formato de blog.
+- Contato: cadastro/login e comentários com tag "Dúvidas".
+- Painel administrativo: criação/edição de logs, anexos, mensagens, moderação de comentários, token da ponte e troca de senha.
+- Backend PHP com SQLite, sessões, password_hash/password_verify, CSRF para ações administrativas e whitelist de uploads.
+
+PROGRAMA C
+- Botão principal de Telemetria e botão de Logs de Campo/Site.
+- Janela de controle com ligar/desligar, intervalo, atualizar, sincronizar, exportar logs/seções e abrir pasta local.
+- Presets: 10 min, 1 h, 1 dia, 5 dias e 1 semana.
+- Exportação local atômica em DATA\WEB_TELEMETRY: status.ini, config_snapshot.dat, runtime_config.ini, heatmap.csv, spectrum_latest.csv, large_scale.ref e marcadores de sincronização.
+- Nenhuma conexão de Internet adicionada ao C.
+
+PONTE INTERMEDIÁRIA
+- bridge/sync_telemetry.py usa apenas a biblioteca padrão do Python.
+- Faz mosaico de larga escala, média espectral histórica, seleção de arquivos recentes, resumo de logs e upload ao servidor.
+- Configurações de rede/porta COM ficam ocultas no payload público; a cópia completa fica disponível apenas via endpoint administrativo.

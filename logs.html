@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Logs de Campo - Rádio Telescópio i586</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-full">
+<header class="site-header">
+<div>
+<h1>SPECTRA - RÁDIO TELESCÓPIO i586</h1>
+<p class="sub">Estrutura de arquivos e histórico de versões</p>
+</div>
+<div class="header-actions"><div class="header-version"><span>S.P.E.C.T.R.A</span><strong>23.0.1</strong></div><a class="account-link" data-account-link href="conta.html">Entrar / Criar conta</a></div>
+</header>
+<div class="main-layout">
+<nav aria-label="Navegação principal" class="sidebar"><div class="sidebar-title">ÍNDICE</div><ul><li><a class="nav-link" href="index.html">Portal Entrada</a></li><li><a class="nav-link" href="sobre.html">Sobre o Projeto</a></li><li><a class="nav-link" href="hardware.html">Hardware i586</a></li><li><a class="nav-link" href="telemetria.html">Telemetria</a></li><li><a class="nav-link active" href="logs.html">Logs de Campo</a></li><li><a class="nav-link" href="versoes.html">Histórico de Versões</a></li><li><a class="nav-link" href="espectros.html">Espectros</a></li><li><a class="nav-link" href="software.html">Software &amp; DSP</a></li><li><a class="nav-link" href="links.html">Links SETI/NASA</a></li><li><a class="nav-link" href="contato.html">Contato</a></li></ul><div class="sidebar-version"><span>SOFTWARE</span><strong>S.P.E.C.T.R.A 23.0.1</strong><small>Versão mais recente organizada</small></div></nav>
+<main class="content">
+<span class="kicker">ARQUIVOS / LOGS / SESSÕES</span>
+<h2>Logs de Campo e Persistência</h2>
+<section class="live-section" aria-labelledby="live-logs-title">
+<h3 id="live-logs-title">Diário do observatório</h3>
+<p>Posts do administrador e eventos recebidos da intermediária, com anexos para download.</p>
+<div class="telemetry-toolbar"><button type="button" class="small-button" id="reload-logs">Atualizar logs</button></div>
+<div id="logs-list" aria-live="polite"></div></section>
+
+<p class="lead">A linha do tempo completa está em uma página dedicada. Esta seção resume a organização de dados acumulada ao longo das versões organizadas até 6.0.0.</p>
+<div class="retro-box"><div class="directory-tree">Diretório do S.P.E.C.T.R.A\
+|
++-- DATA\
+|   +-- AUDIO\        capturas / partes de áudio
+|   +-- SCANS\        Drift-Scan e produtos espaciais
+|   +-- EXPORT\       exportações gerais
+|   +-- SESSIONS\     sessões científicas do observatório
+|
++-- LOGS\
+|   +-- spectra.log
+|
++-- spectra_config.dat</div></div>
+<h3>Persistência e sessões</h3>
+<p>O armazenamento evolui de salvamento local simples para Drift-Scan com descarga periódica, logs estruturados, arquivos de configuração, sessões científicas e produtos auxiliares. As versões posteriores acrescentam controles de integridade e mecanismos de recuperação.</p>
+<h3>Histórico completo</h3>
+<p>A documentação individual das 105 versões, com os arquivos reorganizados correspondentes, está na página de Histórico de Versões.</p>
+<p><a class="button-link" href="versoes.html">Abrir Histórico de Versões</a></p>
+<div class="note"><strong>Pasta CODES:</strong> cada entrada do histórico abre o arquivo da própria versão em uma nova aba; versões com módulos auxiliares exibem todos os arquivos daquela pasta.</div>
+</main>
+</div>
+<footer><p>Logs e arquivos organizados pelo S.P.E.C.T.R.A</p></footer>
+</div>
+<script src="app.js" defer></script><script src="logs.js" defer></script>
+</body>
+</html>

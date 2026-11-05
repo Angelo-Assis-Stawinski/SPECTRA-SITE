@@ -1,0 +1,41 @@
+S.P.E.C.T.R.A — SITE 4.6.11 + TELEMETRIA SEGURA
+
+ARQUITETURA
+1) PC antigo (K6-2): executa somente o S.P.E.C.T.R.A e grava snapshots pequenos em DATA\WEB_TELEMETRY. NÃO precisa e NÃO deve ter acesso direto à Internet.
+2) PC intermediário: monta/compartilha a pasta do S.P.E.C.T.R.A na LAN, executa bridge/sync_telemetry.py, calcula o mosaico reduzido de larga escala, mantém a média histórica dos espectros, lista arquivos recentes e faz o upload HTTPS.
+3) Servidor do site: PHP + banco SQLite; atende contas, comentários, logs, painel admin e telemetria.
+4) Visitante: o navegador desenha os mapas/canvas.
+
+SERVIDOR
+- PHP 8.0+ com PDO_SQLite.
+- Extensão PDO_SQLite habilitada.
+- HTTPS recomendado/obrigatório para produção.
+- Dê permissão de escrita ao usuário do PHP somente nas pastas private/, data/, public_data/ e uploads/.
+- A senha administrativa não está em texto puro no pacote: config.php contém somente o hash.
+
+PONTE
+- Copie bridge/config.example.json para bridge/config.json na máquina intermediária.
+- Ajuste spectra_root e server_url.
+- Entre no painel administrativo do site e use “Mostrar token”; coloque esse token em bridge/config.json.
+- Agende bridge/sync_telemetry.py para rodar a cada 5 minutos. Ele só envia quando houver nova geração, sync.request ou logs.request.
+
+S.P.E.C.T.R.A / PC ANTIGO
+- Use o botão “Telemetria: DESLIGADA...” na tela principal.
+- Marque “Ativar exportação automática local”.
+- Preset inicial: 10 minutos. Também existem 1 hora, 1 dia, 5 dias e 1 semana.
+- “Atualizar snapshot agora” apenas regrava os arquivos locais.
+- “Sincronizar com a ponte” gera o snapshot e um arquivo sync.request.
+- “Exportar logs / seções” solicita que a ponte publique logs e arquivos recentes.
+
+SEGURANÇA
+- Não faça encaminhamento de portas para o K6-2.
+- Prefira uma VLAN/rede local separada e compartilhamento SMB restrito ao IP/usuário da máquina intermediária.
+- O token da ponte deve existir somente no servidor e na máquina intermediária.
+- Os IPs internos/porta COM são ocultados do JSON público pela ponte.
+
+ATUALIZAÇÃO WEB 2
+Leia ATUALIZACAO_E_TESTE.txt para aplicar sem perder o banco e testar anexos.
+No teste local, use INICIAR_SITE.bat ou php -S com router.php.
+
+INTEGRAÇÃO DA NOVA BASE
+Leia primeiro ATUALIZACAO_NOVA_BASE.txt. Os 93 códigos foram mantidos sem alteração.

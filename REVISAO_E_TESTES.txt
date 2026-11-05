@@ -1,0 +1,38 @@
+REVISÃO DA INTEGRAÇÃO — 12/10/2026
+
+BASES UTILIZADAS
+SITE-NOVA-NUM(1).rar: páginas e códigos da nova numeração.
+i586Site-TELEMETRIA-SEGURA.rar: banco, anexos, autenticação, painel, API e ponte.
+
+PRESERVAÇÃO VERIFICADA
+Os 93 arquivos em CODES/ são idênticos, byte a byte, aos da nova base.
+Banco SQLite, token e BMP existente são idênticos aos do site completo fornecido.
+67 pacotes ZIP de versões/variante foram verificados por CRC.
+
+TESTES CONCLUÍDOS
+- Sintaxe: seis PHP, sete JavaScript; leitura/execução do script Python da ponte.
+- As 12 páginas foram servidas por PHP 8.3 com PDO_SQLite.
+- Links locais, scripts, imagens e pacotes existem; IDs únicos nas páginas.
+- Cadastro e duplicidade de e-mail; login administrativo; autorização e CSRF.
+- Criação/edição/inativação/exclusão de mensagens.
+- Posts com anexos; upload e download binário de C e WAV; rejeição de PHP.
+- Log original e download do BMP recuperado.
+- Comentários pendentes, publicação/ocultação e proteção do e-mail público.
+- Bloqueio HTTP do banco, token, configuração, pasta bridge e arquivos ocultos.
+- POST obrigatório nas ações de escrita.
+- Token da ponte; configuração privada ausente na API pública e disponível ao admin.
+- Ponte real com arquivos de teste no formato exportado pela 4.6.11.
+- Heatmap, mosaico 360x180, arquivos recentes, download dos dados e log automático.
+- Média espectral incremental, deduplicação, bloqueio de snapshot parcial e recuperação após falha de envio.
+
+TOTAL
+456 verificações concluídas (inclui links locais e IDs), em cópia de teste separada.
+As contas, senhas e telemetria utilizadas nos testes não foram incorporadas ao pacote.
+
+AJUSTE ADICIONAL
+hardware.html referenciava IMG/Pentium.jpe, inexistente. Corrigido para IMG/Pentium.JPG.
+
+LIMITES
+Testes locais; não equivalem a publicação na hospedagem real, medição de carga no K6-2 ou aquisição de RF. Os códigos científicos foram preservados, sem recompilação neste trabalho de integração web.
+
+O layout em navegador não foi validado visualmente nesta revisão. Foram conferidos links, IDs e elementos usados pelos scripts.

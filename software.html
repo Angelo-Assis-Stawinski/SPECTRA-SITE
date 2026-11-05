@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Software &amp; DSP - S.P.E.C.T.R.A</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-full">
+<header class="site-header">
+<div>
+<h1>SPECTRA - RÁDIO TELESCÓPIO i586</h1>
+<p class="sub">Sistemas operacionais, DSP, rede e sincronização</p>
+</div>
+<div class="header-actions"><div class="header-version"><span>S.P.E.C.T.R.A</span><strong>23.0.1</strong></div><a class="account-link" data-account-link href="conta.html">Entrar / Criar conta</a></div>
+</header>
+<div class="main-layout">
+<nav aria-label="Navegação principal" class="sidebar"><div class="sidebar-title">ÍNDICE</div><ul><li><a class="nav-link" href="index.html">Portal Entrada</a></li><li><a class="nav-link" href="sobre.html">Sobre o Projeto</a></li><li><a class="nav-link" href="hardware.html">Hardware i586</a></li><li><a class="nav-link" href="telemetria.html">Telemetria</a></li><li><a class="nav-link" href="logs.html">Logs de Campo</a></li><li><a class="nav-link" href="versoes.html">Histórico de Versões</a></li><li><a class="nav-link" href="espectros.html">Espectros</a></li><li><a class="nav-link active" href="software.html">Software &amp; DSP</a></li><li><a class="nav-link" href="links.html">Links SETI/NASA</a></li><li><a class="nav-link" href="contato.html">Contato</a></li></ul><div class="sidebar-version"><span>SOFTWARE</span><strong>S.P.E.C.T.R.A 23.0.1</strong><small>Versão mais recente organizada</small></div></nav>
+<main class="content">
+<span class="kicker">S.P.E.C.T.R.A / ESTADO ORGANIZADO: 23.0.1</span>
+<h2>Software &amp; Processamento de Sinais</h2>
+<p class="lead">A versão mais recente documentada é a <strong>23.0.1</strong>, que acrescenta captura científica de áudio demodulado AM/FM ao Drift-Scan. A série 5.x introduz gestão de memória, visualização galáctica e geometria 3D baseada em distâncias de CSV. O histórico descreve separadamente as seis novas transições.</p>
+<table class="tech-table">
+<tr><th>Campo</th><th>Informação documentada</th></tr>
+<tr><td>Versão mais recente</td><td>23.0.1</td></tr>
+<tr><td>Fonte principal</td><td><a href="CODES/23.0.1/PARA_C_RADIO_TCC/spectra.c" target="_blank" rel="noopener noreferrer"><code>CODES/23.0.1/PARA_C_RADIO_TCC/spectra.c</code></a></td></tr>
+<tr><td>Plataforma</td><td>Microsoft Windows / Win32, mantendo compatibilidade de código com ambiente legado</td></tr>
+<tr><td>Amostragem</td><td>44.100 Hz</td></tr>
+<tr><td>RF padrão</td><td>1420.405 MHz</td></tr>
+<tr><td>Rede de dados</td><td>TCP 6789 • arquitetura Mestre/Escravo</td></tr>
+<tr><td>Sincronismo</td><td>UDP 6790 + GPS 1PPS / referências locais</td></tr>
+<tr><td>Módulos recentes</td><td>Aurelius, FX, memória, galáxia visual, geometria científica e ciência de áudio</td></tr>
+</table>
+<h3>Camadas acumuladas</h3>
+<div class="card-grid">
+<div class="card"><h3>1.0.0–1.4.6</h3><p>Aquisição, FFT, heatmap, captura contínua, persistência e estabilização da interface.</p></div>
+<div class="card"><h3>1.5.6–2.5.5</h3><p>Drift-Scan, cluster, sincronismo, geometria, síntese de abertura e recuperação automática.</p></div>
+<div class="card"><h3>2.6.6–3.6.13</h3><p>SANDBOX 3D, mapas de larga escala, reconstrução visual, centro de fase e projeção UVW.</p></div>
+<div class="card"><h3>3.7.13–4.1.1</h3><p>Calibração, RFI, CLEAN, Observatório, FITS/replay, MFS, w-stacking, PFB, weighting e instrumentação científica.</p></div>
+<div class="card"><h3>4.2.1–4.5.6</h3><p>Integração do Aurelius, telemetria, reorganização da interface e correções operacionais de Ciência e Drift-Scan.</p></div>
+<div class="card"><h3>4.6.6–4.6.11</h3><p>Arquitetura FX, transporte por quadros PCM e revisões específicas das interfaces Observatório, UVW, Ciência, FX e SANDBOX.</p></div>
+<div class="card"><h3>5.0.0–5.1.2</h3><p>Arenas de buffers, perfil de memória, correção de persistência, fallback CRT e exportação BMP por blocos.</p></div><div class="card"><h3>5.2.1–5.3.1</h3><p>Níveis de detalhe 3D, modelo artístico e método científico que recebe distâncias heliocêntricas dos CSVs.</p></div><div class="card"><h3>6.0.0</h3><p>Métricas de áudio demodulado, espectro opcional e registro de sessões sem calibração RF presumida.</p></div></div>
+<h3>Estado dos módulos na 6.0.0</h3>
+<ul class="feature-list">
+<li><code>spectra.c</code>: integra captura, interface e ciclo das sessões científicas de áudio.</li>
+<li><code>aurelius.c</code>: usa o alocador de memória introduzido na 5.0.0; preservado nas demais novas versões.</li>
+<li><code>spectra_fx_core.h</code>: permanece idêntico ao da 4.6.11.</li>
+<li><code>spectra_fx_win32.inc</code>: pares sob demanda desde 5.0.0 e validação da transmissão reforçada na 5.1.2.</li>
+<li><code>spectra_memory.h/.inc</code> e <code>spectra_memory_ui.inc</code>: perfil, alocação, proteções e diagnóstico.</li>
+<li><code>spectra_ls_galaxy_core.h</code>: modelo artístico guiado pelos CSVs, introduzido na 5.2.1.</li>
+<li><code>spectra_ls_science_core.h</code>: parser e coordenadas heliocêntricas com distâncias fornecidas, desde 5.3.1.</li>
+<li><code>spectra_audio_science.h/.inc</code>: métricas, espectro e produtos persistentes de áudio na 6.0.0.</li>
+</ul>
+<div class="note"><strong>Compilação:</strong> no projeto, os arquivos C são unidades de compilação; headers e arquivos .inc permanecem junto deles e são incluídos pelo código. Não os compile separadamente como arquivos .o. O pacote completo mantém os nomes e as subpastas recebidos.</div>
+<p><a class="button-link" href="downloads/23.0.1.zip" download>Baixar S.P.E.C.T.R.A 23.0.1 completo</a></p>
+<div class="warning"><strong>Escopo da documentação:</strong> a documentação foi atualizada pela comparação estática dos fontes e textos fornecidos. Ele descreve o que está implementado e o que mudou entre cópias; não equivale, por si só, a teste de compilação, aquisição com hardware ou validação científica integral.</div>
+<p><a class="button-link" href="versoes.html">Ver as 105 versões e abrir os respectivos códigos</a></p>
+</main>
+</div>
+<footer><p>S.P.E.C.T.R.A • processamento de sinais para radioastronomia</p></footer>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>

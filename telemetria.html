@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Telemetria - Rádio Telescópio i586</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-full">
+<header class="site-header">
+<div>
+<h1>SPECTRA - RÁDIO TELESCÓPIO i586</h1>
+<p class="sub">Parâmetros operacionais, rede e sincronização</p>
+</div>
+<div class="header-actions"><div class="header-version"><span>S.P.E.C.T.R.A</span><strong>23.0.1</strong></div><a class="account-link" data-account-link href="conta.html">Entrar / Criar conta</a></div>
+</header>
+<div class="main-layout">
+<nav aria-label="Navegação principal" class="sidebar"><div class="sidebar-title">ÍNDICE</div><ul><li><a class="nav-link" href="index.html">Portal Entrada</a></li><li><a class="nav-link" href="sobre.html">Sobre o Projeto</a></li><li><a class="nav-link" href="hardware.html">Hardware i586</a></li><li><a class="nav-link active" href="telemetria.html">Telemetria</a></li><li><a class="nav-link" href="logs.html">Logs de Campo</a></li><li><a class="nav-link" href="versoes.html">Histórico de Versões</a></li><li><a class="nav-link" href="espectros.html">Espectros</a></li><li><a class="nav-link" href="software.html">Software &amp; DSP</a></li><li><a class="nav-link" href="links.html">Links SETI/NASA</a></li><li><a class="nav-link" href="contato.html">Contato</a></li></ul><div class="sidebar-version"><span>SOFTWARE</span><strong>S.P.E.C.T.R.A 23.0.1</strong><small>Versão mais recente organizada</small></div></nav>
+<main class="content">
+<span class="kicker">PAINEL DOCUMENTAL / 4.6.11</span>
+<h2>Telemetria e Parâmetros Operacionais</h2>
+<section class="live-section" aria-labelledby="live-telemetry-title">
+<h3 id="live-telemetry-title">Dados publicados pela estação</h3>
+<p>A intermediária da escola publica os snapshots do S.P.E.C.T.R.A. Esta área consulta o servidor a cada 30 segundos; a data indica quando os dados foram enviados.</p>
+<div class="telemetry-toolbar"><span id="telemetry-state" class="badge warn">Aguardando dados</span><span id="telemetry-updated" class="muted"></span><button class="small-button" id="refresh-telemetry">Atualizar agora</button></div><div id="telemetry-summary" class="kv-grid"></div><div class="live-grid"><section class="live-panel"><h3>Mapa de calor atual</h3><canvas id="heatmap-live" class="telemetry-canvas" width="500" height="500"></canvas><p class="muted">Renderizado no dispositivo do visitante a partir da grade numérica publicada.</p></section><section class="live-panel"><h3>Mapa de larga escala</h3><canvas id="heatmap-large" class="telemetry-canvas" width="720" height="360"></canvas><p class="muted">Mosaico e redução de resolução feitos pela máquina intermediária, nunca pelo K6-2.</p></section></div><h3>Configurações atuais do programa</h3><p class="muted">Parâmetros publicados pelo S.P.E.C.T.R.A; campos marcados como privados pela ponte são ocultados do público.</p><div id="config-table" class="scroll-table"></div><h3>Arquivos já obtidos</h3><div id="files-table" class="scroll-table"></div><div class="note"><strong>Arquitetura de segurança:</strong> o computador antigo não recebe conexões da Internet nem executa PHP, banco, renderização ou agregações. Ele apenas produz arquivos locais para a ponte intermediária.</div></section>
+
+<p class="lead">A referência técnica abaixo acompanha o software 6.0.0. Os dados recebidos da estação aparecem no painel acima e podem corresponder a outra versão em execução.</p>
+<div aria-label="Resumo de parâmetros técnicos" class="terminal">
+<div class="status-line"><span class="status-label">VERSÃO</span><strong>S.P.E.C.T.R.A 6.0.0</strong></div>
+<div class="status-line"><span class="status-label">RF PADRÃO</span><strong>1420.405 MHz</strong></div>
+<div class="status-line"><span class="status-label">AMOSTRAGEM</span><strong>44.100 Hz</strong></div>
+<div class="status-line"><span class="status-label">DADOS</span><strong>TCP 6789 • protocolo de rede versão 3 nas camadas avançadas</strong></div>
+<div class="status-line"><span class="status-label">TEMPO</span><strong>UDP 6790 • GPS 1PPS / sincronismo</strong></div>
+<div class="status-line"><span class="status-label">TOPOLOGIA</span><strong>1 Mestre + até 10 Escravas</strong></div>
+</div>
+<h3>Integridade de rede e sessão</h3>
+<p>A evolução do cluster acrescenta identificação de sessão e sequência e, nas camadas avançadas do Observatório, CRC32, métricas de lacunas, duplicatas/reordenação e timestamps de aquisição e recepção.</p>
+<h3>Sincronismo astronômico</h3>
+<p>A partir da 3.6.4 o código incorpora Astronomia/UVW com latitude/longitude, DUT1, JD, GMST, LST, RA/Dec e centro de fase para projetar linhas de base ENU em UVW celeste no instante da observação.</p>
+<h3>Qualidade científica</h3>
+<p>As versões 3.7.13–4.1.1 acrescentam métricas e produtos ligados a SNR, RMS, clipping, RFI, coerência de baseline, integridade da calibração, mapas de ruído/SNR/peso e estimativas instrumentais quando configuradas. As revisões posteriores preservam esse conjunto enquanto reorganizam módulos e interfaces.</p>
+<div class="warning"><strong>Referência documental:</strong> os parâmetros desta seção são descritos no código. Para leituras recebidas da estação, consulte o painel e sua data de atualização acima.</div>
+</main>
+</div>
+<footer><p>Parâmetros documentais do S.P.E.C.T.R.A 4.6.11</p></footer>
+</div>
+<script src="app.js" defer></script><script src="telemetria.js" defer></script>
+</body>
+</html>

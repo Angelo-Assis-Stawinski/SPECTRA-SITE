@@ -1,0 +1,20 @@
+ATUALIZAÇÃO DO HISTÓRICO — 20/10/2026
+
+Incluídas: 5.0.0, 5.0.1, 5.1.2, 5.2.1, 5.3.1 e 6.0.0.
+Preservados: 93 fontes antigos, backend, banco, token, anexo, estilos e funções anteriores.
+O banco incluído é o da base recebida anteriormente. Ele não contém alterações posteriores de uma hospedagem que não foi acessada.
+
+PARA ATUALIZAR UM SITE EM USO
+Faça backup. Atualize as páginas HTML, acrescente as seis novas pastas CODES/, os novos ZIPs de downloads/ e a pasta TESTES/. Nenhum arquivo PHP, JS, CSS, banco, token ou configuração precisa ser substituído para aplicar este histórico.
+Preserve private/, uploads/, public_data/, data/, config.php e a configuração da ponte atuais da hospedagem.
+Os caminhos das versões antigas permanecem iguais. A pasta externa do pacote agora se chama radiotelescopio_spectra_6.0.0; publique seu conteúdo na mesma raiz do site, sem criar uma segunda cópia em outra URL por engano.
+
+DOWNLOADS
+Cada pacote novo contém fontes e todos os módulos recebidos. As versões 5.2.1 em diante incluem os seus conjuntos de CSVs e instruções. O conjunto complementar separado tem ZIP próprio e não é uma versão adicional.
+Preservados os nomes dos fontes: o principal da pasta 5.1.2 ainda se chama SPECTRA_5.0.1.c. Isso está registrado no histórico.
+Os geradores Python originais podem conter caminhos absolutos do ambiente de origem; revise-os antes de regenerar dados.
+
+ESCOPO
+Esta atualização documenta e disponibiliza as versões. Não modifica seus algoritmos, não instala o programa nas máquinas e não amplia o esquema da telemetria para os novos CSVs científicos de áudio.
+Para os requisitos do servidor e da ponte, consulte ATUALIZACAO_NOVA_BASE.txt. As instruções antigas com 4.6.11 descrevem a integração anterior, preservada.
+Veja ANALISE_NOVAS_VERSOES.md para o texto técnico e VALIDACAO_HISTORICO_6.0.0.txt para as verificações desta atualização.

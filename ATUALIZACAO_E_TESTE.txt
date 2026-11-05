@@ -1,0 +1,46 @@
+S.P.E.C.T.R.A v53 — REVISÃO WEB 2 — 06/10/2026
+
+COMO APLICAR NO SITE QUE JÁ ESTÁ FUNCIONANDO
+1. Pare o servidor PHP com Ctrl+C e faça uma cópia da pasta atual.
+2. Extraia o ZIP e copie os arquivos da pasta i586Site/radiotelescopio_v53_historico sobre a pasta do site.
+3. Preserve private/ (banco, token e sessões), uploads/, public_data/ e data/ existentes. O ZIP não inclui banco ou conteúdo de teste.
+4. Preserve também bridge/config.json e bridge/bridge_state.json. Atualize sync_telemetry.py na máquina intermediária.
+5. Se personalizou config.php, mantenha e-mail/hash administrativo e limites próprios. O novo caminho preferido da telemetria é __DIR__.'/private/telemetry.json'.
+6. No teste local do Windows, execute INICIAR_SITE.bat na pasta do site.
+   Equivalente no CMD:
+   php -d upload_max_filesize=25M -d post_max_size=30M -d display_errors=0 -S 127.0.0.1:8080 router.php
+7. Abra http://127.0.0.1:8080/diagnostico.php e depois o portal. Recarregue com Ctrl+F5 para renovar os scripts/CSS.
+
+ANEXOS
+- O limite do site é 25 MiB; limites menores configurados no PHP também se aplicam e aparecem no painel.
+- INICIAR_SITE.bat ajusta os limites da sessão de teste, mantendo o php.ini que você já configurou para PDO_SQLite.
+- Para hospedagem Apache/PHP-FPM, configure upload_max_filesize=25M e post_max_size=30M no PHP da hospedagem; reinicie o serviço se necessário.
+- Formatos permitidos: TXT, C, CSV, JSON, PDF, PNG, JPG/JPEG, WEBP, BMP, WAV, ZIP, FITS/FIT.
+- Crie/edite um Log de Campo, escolha o arquivo e clique Salvar. Confira a mensagem de sucesso e abra o anexo no post publicado.
+- Se a sessão, o tipo, o limite, as permissões ou a gravação falharem, o painel apresenta a causa sem informar sucesso falso.
+- Editar um post preserva o anexo salvo. Remover anexo desassocia o arquivo do post; não apaga fisicamente arquivos já enviados, pois outros posts podem referenciá-los.
+
+MENSAGENS
+- O painel oferece Nova mensagem, Editar e Excluir.
+- Excluir solicita confirmação e remove a mensagem do banco. Visitantes deixam de recebê-la ao abrir/recarregar a página.
+
+PROTEÇÃO DOS ARQUIVOS
+- Para php -S, use router.php conforme o comando acima. Esse servidor não interpreta .htaccess.
+- Apache deve permitir as regras .htaccess do pacote (AllowOverride para autorização/Options).
+- Em Nginx, configure bloqueio dos caminhos private/, data/, bridge/, uploads/, public_data/ e dos arquivos config.php/bootstrap.php/router.php; os downloads passam por download.php.
+- Dados privados, banco e token não devem ter acesso HTTP direto.
+
+PROGRAMA C
+- Substitua a fonte do projeto atual pelo .c entregue e compile no seu Dev-C++ com as bibliotecas do projeto.
+- Linker habitual: -lwinmm -lwsock32 -lcomdlg32 -lgdi32 -luser32 -lshell32 -lm
+- Não instale PHP/Python/banco no K6-2. Ele continua escrevendo apenas arquivos locais; a ponte realiza a publicação.
+- Telemetria desligada por padrão em configuração nova. Atualizações automáticas: 10 minutos, 1 hora, 1 dia, 5 dias ou 1 semana. Exportações manuais continuam disponíveis.
+- Ao desativar, um snapshot informa a ponte sobre o novo estado. Isso não impede uma sincronização manual solicitada pelo operador.
+- Em erro de disco, nenhuma geração parcial deve ser publicada. O programa registra a falha e espaça as tentativas automáticas em pelo menos 5 minutos.
+- Teste primeiro em um PC de desenvolvimento: snapshot, pedido de sincronização, ponte, mapas, logs e downloads. Só depois substitua o executável usado na aquisição real.
+
+O relatório REVISAO_E_TESTES.txt informa o escopo e os limites das verificações.
+
+
+INTEGRAÇÃO ADICIONAL — 28/10/2026
+Foram anexadas à página Histórico de Versões as dez versões recebidas em NovasVersoes.zip (18.1.0, 18.1.1, 18.2.0, 18.3.0, 19.0.0, 20.0.0, 21.0.0, 22.0.0, 23.0.0 e 23.0.1). O catálogo anterior foi preservado. Consulte INTEGRACAO_NOVAS_VERSOES_18.1.0_A_23.0.1.txt para o relatório comparativo.

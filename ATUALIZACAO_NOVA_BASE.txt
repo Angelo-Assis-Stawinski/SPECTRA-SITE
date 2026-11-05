@@ -1,0 +1,53 @@
+S.P.E.C.T.R.A — BASE 4.6.11 COM BANCO E TELEMETRIA
+
+CONTEÚDO
+- Nova base documental, páginas, numeração e 93 arquivos de código preservados.
+- 66 versões oficiais e uma variante, com 67 pacotes ZIP para baixar todos os módulos juntos.
+- Banco SQLite, conta administrativa, log e anexo existentes recuperados do site completo fornecido.
+- Cadastro/login, comentários moderados, logs com anexos, mensagens editáveis/excluíveis e painel administrativo.
+- Telemetria, configurações, heatmaps, média/histórico espectral, arquivos recentes e ponte intermediária.
+- Login da página inicial abaixo de ENTRAR NO PORTAL e VER TODAS AS VERSÕES.
+
+INSTALAÇÃO NOVA
+1. Extraia o ZIP. A pasta radiotelescopio_spectra_4.6.11 é a raiz do site.
+2. Use PHP 8.0 ou superior com PDO_SQLite. Não basta abrir index.html pelo explorador.
+3. No teste local Windows, use INICIAR_SITE.bat, com PHP instalado no PATH.
+4. Em Apache, copie também os arquivos .htaccess, inclusive os das subpastas.
+5. Permita escrita ao PHP em private/, data/, uploads/ e public_data/.
+6. Use HTTPS na hospedagem. O domínio não configura a ponte automaticamente.
+7. O login administrativo é o mesmo do banco anterior; a integração não redefiniu sua senha.
+
+ATUALIZAÇÃO DE UM SITE JÁ EM USO
+- Faça backup completo antes de aplicar.
+- Atualize HTML, CSS, JS, PHP, CODES/ e downloads/.
+- Preserve o banco e token atuais de private/, incluindo site.sqlite e bridge_token.txt.
+- Preserve uploads/ e public_data/ atuais, adicionando arquivos que ainda não existam.
+- Preserve sua configuração de config.php se houver caminhos, administrador ou limites personalizados.
+- O banco incluído no pacote corresponde ao arquivo anterior fornecido nesta conversa. Ele não contém mudanças feitas depois em um servidor que não foi acessado.
+- Copie as regras .htaccess mesmo quando preservar o conteúdo das pastas.
+- Nunca substitua um banco ativo pelo banco do pacote sem conferir qual é mais recente.
+
+PONTE NA ESCOLA / WINDOWS 10
+1. Instale Python 3.9 ou superior na intermediária.
+2. Copie a pasta bridge/ para ela e crie config.json a partir de config.example.json.
+3. Configure spectra_root para a pasta real ou compartilhamento do S.P.E.C.T.R.A.
+4. Configure telemetry_dir para DATA/WEB_TELEMETRY desse programa.
+5. Configure server_url com https://SEU-DOMINIO/api.php.
+6. No painel admin, use Mostrar token e copie-o para upload_token, somente na intermediária.
+7. Ative a exportação local no S.P.E.C.T.R.A em execução. A versão 4.6.11 incluída mantém esse exportador.
+8. Execute python sync_telemetry.py. Agende a execução a cada cinco minutos e impeça execuções simultâneas.
+9. A página de telemetria consulta o servidor a cada 30 segundos; espectros, a cada 60 segundos. A frequência de novas observações depende da exportação local e da agenda da ponte.
+10. A central em casa pode acompanhar o site. Controle remoto das máquinas exige uma conexão separada; o painel administrativo não inicia ou para aquisição.
+
+SEM DADOS AO VIVO
+- É esperado aparecer AGUARDANDO PRIMEIRO SNAPSHOT antes da primeira publicação real.
+- Os parâmetros documentais foram mantidos abaixo do painel e identificados como referência.
+- Nenhum dado simulado ou conta dos testes foi incluído na entrega.
+
+HOSPEDAGEM
+- Apache usa .htaccess; INICIAR_SITE.bat usa router.php para proteger arquivos privados.
+- Em Nginx/IIS, configure regras equivalentes para negar private/, data/, bridge/, arquivos ocultos e config.php/bootstrap.php/router.php; encaminhe downloads de anexos/dados por download.php.
+- Não publique banco, token ou arquivos de configuração como conteúdo estático.
+
+VALIDAÇÃO
+Veja REVISAO_E_TESTES.txt. A publicação real no domínio e aquisição no hardware da escola não foram executadas nesta revisão.

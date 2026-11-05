@@ -1,0 +1,34 @@
+VALIDAÇÃO DO HISTÓRICO — 20/10/2026
+
+CONTEÚDO
+Seis novas versões: 5.0.0, 5.0.1, 5.1.2, 5.2.1, 5.3.1 e 6.0.0.
+72 entradas oficiais + uma variante; conjunto complementar identificado separadamente.
+142 fontes/módulos (93 anteriores + 49 novos), 54 arquivos de teste/apoio.
+Todos os 103 arquivos do anexo paraGPT.zip preservados byte a byte.
+
+PRESERVAÇÃO
+Comparados os bytes dos fontes antigos, backend PHP, JavaScript, CSS, banco SQLite, token, anexo e downloads anteriores.
+As entradas históricas anteriores permanecem iguais, com a retirada apenas do destaque de versão mais recente da 4.6.11.
+Os nomes e caminhos das versões antigas foram mantidos.
+
+VERIFICAÇÕES DO SITE
+1065 verificações de integridade, preservação, links locais, âncoras, contagem de versões, conteúdo dos pacotes e downloads HTTP.
+As 12 páginas foram servidas pelo PHP local; os novos arquivos e ZIPs foram baixados pelo mesmo router e comparados aos originais.
+Cada ZIP novo contém todos os arquivos da sua versão, com CRC conferido.
+
+REGRESSÃO DO BACKEND
+568 verificações da suíte de integração (incluem páginas e links).
+Sintaxe de seis PHP e sete JS; autenticação, cadastro, autorização, CSRF, posts, anexos, mensagens, moderação, dados privados e ponte.
+Executada a ponte Python com arquivos de estação simulados, incluindo mapas, espectros, arquivos recentes, média incremental, deduplicação e recuperação após falha de envio.
+Os testes usaram uma cópia isolada do banco e uma senha temporária; nenhum registro de teste foi incorporado ao site entregue.
+
+NÚCLEOS PORTÁVEIS C
+PASS: 23 verificacoes de nucleos portaveis.
+Compilados com GCC local em modo C89: headers originais de áudio, geometria científica e galáxia da 6.0.0.
+Conferidos silêncio, clipping, RMS/potência de senoide, pico e soma espectral, rejeição de quadros curtos, parser de distância, direções X/Y/Z, geração determinística e máscara de cobertura.
+Esses testes de funções isoladas não representam compilação do aplicativo Win32 completo.
+
+LIMITES
+Não houve aquisição de RF, execução no K6-2/Windows legado, compilação no Dev-C++ 4.9.9.2 nem validação científica integral.
+O layout existente foi preservado e os elementos/links foram conferidos; não foi feita inspeção visual em navegador nesta revisão.
+Não houve publicação em um domínio ou acesso ao banco de uma hospedagem externa.
