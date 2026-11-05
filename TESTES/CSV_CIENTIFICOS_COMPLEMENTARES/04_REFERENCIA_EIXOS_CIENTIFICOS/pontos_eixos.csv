@@ -1,0 +1,23 @@
+# SPECTRA_LARGE_SCALE_SECTION_V1
+# Source=SIMULACAO_EIXOS_GEOMETRICOS
+# CoordinateSystem=GALACTIC_LB
+# CoordinatesValid=1
+# DistanceUnit=kpc
+# DistanceOrigin=HELIOCENTRIC
+# DistanceKind=SYNTHETIC
+# GlobalWidth=360
+# GlobalHeight=181
+# OffsetX=0
+# OffsetY=0
+# Width=360
+# Height=181
+# GlobalLonStartDeg=-180.0
+# GlobalLonStepDeg=1.0
+# GlobalLatStartDeg=-90.0
+# GlobalLatStepDeg=1.0
+x,y,galactic_lon_deg,galactic_lat_deg,intensity,distance_kpc,distance_sigma_kpc
+180,90,0,0,1,8,0.3
+270,90,90,0,0.8,8,0.3
+0,90,-180,0,0.6,8,0.3
+180,180,0,90,0.9,8,0.3
+180,0,0,-90,0.5,8,0.3

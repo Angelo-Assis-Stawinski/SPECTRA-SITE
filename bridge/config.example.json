@@ -1,0 +1,16 @@
+{
+  "spectra_root": "D:/SPECTRA",
+  "telemetry_dir": "D:/SPECTRA/DATA/WEB_TELEMETRY",
+  "server_url": "https://seu-dominio.example/api.php",
+  "upload_token": "COLE_O_TOKEN_DO_PAINEL_ADMIN",
+  "recent_file_count": 20,
+  "max_public_file_mb": 20,
+  "public_extensions": [
+    ".csv",
+    ".txt",
+    ".wav",
+    ".bmp",
+    ".fits",
+    ".fit"
+  ]
+}
